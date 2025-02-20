@@ -1,0 +1,17 @@
+STRSPN(3) (simplified)
+
+NAME
+    strspn -- span a string
+LIBRARY
+    Standard C Library (libc, -lc)
+SYNOPSIS
+    #include <string.h>
+    size_t strspn(const char *s, const char *charset);
+DESCRIPTION
+    The strcspn() function spans the initial part of the null-terminated 
+string s as long as the characters from s occur in the null-terminated 
+string charset. In other words, it computes the string array index of the 
+first character of s which is not in charset, else the index of the first 
+null character
+RETURN VALUES
+    The strspn() functions return the number of characters spanned.
