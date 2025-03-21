@@ -11,8 +11,8 @@ int main (int ac, char *av[])
 		{
 			if (av[1][i] >= 'a' && av[1][i] <= 'z')
 			{
-				y = av[1][i];
-				while (y >= 'a')
+				y = av[1][i]; 	//! remember this 
+				while (y >= 'a')//! remember this 
 				{
 					write(1, &av[1][i], 1);
 					y--;
@@ -20,8 +20,8 @@ int main (int ac, char *av[])
 			}
 			else if (av[1][i] >= 'A' && av[1][i] <= 'Z')
 			{
-				y = av[1][i];
-				while (y >= 'A')
+				y = av[1][i]; 	//! remember this 
+				while (y >= 'A')//! remember this 
 				{
 					write(1, &av[1][i], 1);
 					y--;

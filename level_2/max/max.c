@@ -10,6 +10,7 @@ int	max(int *tab, unsigned int len)
 	}
 	return (tmp);
 }
+/*
 
 #include <stdio.h>
 int main (void)
@@ -18,3 +19,5 @@ int main (void)
 	int larg = max(arr, 3);
 	printf("largest number foun in the array = %d\n", larg);
 }
+
+*/

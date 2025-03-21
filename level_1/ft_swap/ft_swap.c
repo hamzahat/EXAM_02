@@ -4,7 +4,7 @@ void	ft_swap(int *a, int *b)
 	*a = *b;
 	*b = tmp;
 }
-
+/*
 #include <stdio.h>
 int main (void)
 {
@@ -15,6 +15,4 @@ int main (void)
 	printf ("a = %d , b = %d\n", a, b );
 	return (0);	
 }
-
-//todo:  xor_swap fun:
-
+*/

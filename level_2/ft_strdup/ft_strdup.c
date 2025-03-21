@@ -11,7 +11,7 @@ char	*ft_strdup(const char *src)
 {
 	if (src == NULL)
 		return (NULL);
-	if (!(*src))
+	if (!(*src)) //! this case => ./a.out ""
 		return (malloc(1));
 	char *str = malloc(sizeof(char) * ft_strlen(src) + 1);
 	if (!str)

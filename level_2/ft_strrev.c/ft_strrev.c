@@ -12,13 +12,14 @@ char	*ft_strrev(char *str)
 	int len = ft_strlen(str);
 	while (i < len / 2)
 	{
-		char tmp = str[i];
-		str[i] = str[len - 1 - i];
-		str[len - 1 - i] = tmp;
+		char tmp = str[i];			//! remember this 
+		str[i] = str[len - 1 - i];	//! remember this 
+		str[len - 1 - i] = tmp;		//! remember this 
 		i++;
 	}
 	return (str);
 }
+
 /*
 
 #include <stdio.h>
