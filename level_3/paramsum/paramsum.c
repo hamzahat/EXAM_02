@@ -11,13 +11,7 @@ void	put_nbr(int nb)
 int main (int ac, char *av[])
 {
 	(void)av;
-	if (ac == 1)
-	{
-		put_nbr(0);
-		write(1, "\n", 1);
-		return(0);
-	}
-		put_nbr(ac - 1);
+	put_nbr(ac - 1);
 	write(1, "\n", 1);
 	return(0);
 }
