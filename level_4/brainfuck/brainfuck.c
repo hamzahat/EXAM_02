@@ -1,11 +1,9 @@
-#include <unistd.h>
 #include <stdlib.h>
-
-#define MEMORY_SIZE 2048
+#include <unistd.h>
 
 void brainfuck(char *code)
 {
-    unsigned char memory[MEMORY_SIZE] = {0};  // 2048 bytes initialized to 0
+    unsigned char memory[2048] = {0};  // 2048 bytes initialized to 0
     unsigned char *ptr = memory;              // Memory pointer
     int loop;
 
