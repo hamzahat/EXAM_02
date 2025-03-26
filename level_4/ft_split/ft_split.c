@@ -1,48 +1,29 @@
 #include <stdlib.h>
 
-void	ft_free(char **str)
+int count_word(char *str)
 {
-	int	i;
+	int words = 0;
+	int key = 1;
 
-	i = 0;
-	while (str[i])
-		free(str[i++]);
-	free(str);
-	str = NULL;
-}
-
-static size_t    count_word(const char *str, char c)
-{
-	size_t	words;
-	short	key;
-
-	words = 0;
-	key = 1;
-	while (*str)
+	while(*str)
 	{
-		if (*str != c && key == 1)
+		if (*str != 32  && *str != 9 && key == 1)
 		{
 			words++;
 			key = 0;
 		}
-		else if (*str == c)
+		else if (*str == 32 || *str == 9)
 			key = 1;
 		str++;
 	}
 	return (words);
 }
 
-char    *ft_substr(char const *s, size_t len)
+char *ft_substr(char *s, int len)
 {
-	size_t    i;
-	char    *str;
-
-	if (!s)
-		return (NULL);
-	str = malloc((len + 1) * sizeof(char));
-	if (!str)
-		return (NULL);
-	i = 0;
+	int i = 0;
+	char *str;
+	str = malloc(sizeof(char) * (len + 1));
 	while (i < len)
 	{
 		str[i] = s[i];
@@ -52,45 +33,52 @@ char    *ft_substr(char const *s, size_t len)
 	return (str);
 }
 
-char    **fill_string(char **words, const char *str, char c, size_t words_number)
+char **ft_split(char *str)
 {
-	size_t    len;
-	size_t    i;
-
-	i = 0;
+	int i = 0;
+	int len = 0;
+	if (!str)
+		return (NULL);
+	int word_nb = count_word(str);
+	char **words = malloc(sizeof(char *) * (word_nb + 1));
+	words[word_nb] = NULL;
 	while (*str)
 	{
 		len = 0;
-		while (*str == c && *str)
+		while(*str == 32 || *str == 9)
 			str++;
-		while (*str != c && *str)
+		while(*str != 32 && *str != 9 && *str)
 		{
 			len++;
 			str++;
 		}
-		if (len && i < words_number)
+		if (len && i < word_nb)
 		{
 			words[i] = ft_substr(str - len, len);
-			if (!(words[i]))
-				return (ft_free(words), NULL);
 			i++;
 		}
 	}
-	return (words);
+	return words;
 }
 
-char    **ft_split(const char *str, char c)
-{
-	size_t    words_number;
-	char     **words;
+/*
+* algo:
+* cont how many words
+* allocate for theme + 1 ( NULL )
+* terminate the 2D array by NULL
+* loop throuth the str
+* 	skip dilimiter
+*	count len
+*	call ft_substr and give it str - len , len
+*	assigne it to array pointers one by oner
+*/
 
-	if (!str)
-		return (NULL);
-	words_number = count_word(str, c);
-	words = malloc(sizeof(char *) * (words_number + 1));
-	if (!words)
-		return (NULL);
-	words[words_number] = NULL;
-	return (fill_string(words, str, c, words_number));
-}
+// #include <stdio.h>
+// int main (void)
+// {
+// 	char *s = "  starting and ending   ";
+// 	char **str = ft_split(s, 32);
+// 	while (*str)
+// 		printf("%s\n", *str++);
+// }
 
