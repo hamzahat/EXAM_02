@@ -81,4 +81,3 @@ char **ft_split(char *str)
 // 	while (*str)
 // 		printf("%s\n", *str++);
 // }
-
