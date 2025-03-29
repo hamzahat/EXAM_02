@@ -1,7 +1,7 @@
 unsigned char reverse_bits(unsigned char octet)
 {
     unsigned char result = 0;
-    int i = 8; // 8 bits in a byte
+    int i = 8; // 8 bits in a 1 byte
 
     while (i--)
     {

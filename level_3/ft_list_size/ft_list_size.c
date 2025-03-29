@@ -11,7 +11,7 @@ int	ft_list_size(t_list *begin_list)
 	}
 	return (count);
 }
-
+/*
 // int main :
 #include <stdio.h>
 int main (void)
@@ -43,3 +43,4 @@ int main (void)
 	// }
 	system("leaks a.out");
 }
+*/

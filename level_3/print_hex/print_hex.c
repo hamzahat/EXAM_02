@@ -17,6 +17,7 @@ int ft_atoi(char *str)
 		nb = (nb * 10) + *str++ - 48;
 	return (nb * sign);
 }
+
 void print_hex(int nb)
 {
 	char hex[] = "0123456789abcdef";

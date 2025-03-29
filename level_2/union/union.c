@@ -46,9 +46,11 @@ int main (int ac, char *av[])
 	return (0);
 }
 
-// pesudo code :
+//? pesudo code :
 /*
-jem3 dok 2 strings f 1 string 
-we fkol mera 9bel ma tprinti dak char cheki wach kayn f dik string ( indix li weselti fih daba ( ya3ni matchikich string kooolha ))
-sahl sahl, machi chi haja easy bro ( done )
+* jem3 dok 2 strings f 1 string 
+* we fkol mera 9bel ma tprinti dak char cheki wach kayn f dik string 
+* ( indix li weselti fih daba ( ya3ni matchikich string kooolha ))
+
+* sahl sahl, machi chi haja easy bro ( done )
 */

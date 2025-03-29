@@ -30,12 +30,13 @@ long long	ft_atoi_base(const char *str, int base)
 	return (rest * sign);
 }
 
+/*
 #include <stdio.h>
 
 int main(void)
 {
 	printf("Base 2 :  \"101\"   -> %lld\n", ft_atoi_base("101", 1));      // 0
-	printf("Base 2 :  \"101\"   -> %lld\n", ft_atoi_base("101", 32));      // 0
+	printf("Base 2 :  \"101\"   -> %lld\n", ft_atoi_base("101", 32));     // 0
 	printf("Base 2 :  \"101\"   -> %lld\n", ft_atoi_base("101", 2));      // 5
 	printf("Base 16:  \"2A\"    -> %lld\n", ft_atoi_base("2A", 16));      // 42
 	printf("Base 16:  \"-1A\"   -> %lld\n", ft_atoi_base("-1A", 16));     // -26
@@ -47,3 +48,4 @@ int main(void)
 	printf("Base 10:  \"-00042\"-> %lld\n", ft_atoi_base("-00042", 10));  // -42
 	return 0;
 }
+*/
